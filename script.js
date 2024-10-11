@@ -5,6 +5,10 @@ async function getMessages() {
 
   const element = document.querySelector(".work");
   element.innerHTML = "";
-
+  
+  for (const item of data) {
+    const work = item.work;
+    const image = item.image;
+    element.innerHTML += "<p>" + work + ": " + image + "</p>";
 }
 getMessages();
